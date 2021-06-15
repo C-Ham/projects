@@ -1,0 +1,50 @@
+<!-- SOURCE: https://www.youtube.com/watch?v=QTHRWGn_sJw&list=LL&index=1&t=138s -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Music Player</title>
+</head>
+<body>
+    <h1>Music Player</h1>
+    <!--Overarching container for music player-->
+    <div class="music-container">
+        <!--Song metadata that appears when song is playing-->
+        <div class="music-info">
+            <h4 id="title">Sita's Song</h4>
+            <!--Shows progress bar for active song-->
+            <div class="progress-container">
+                <div class="progress"></div>
+            </div>
+        </div>
+        <!--Audio file-->
+        <audio src="music/sitas-song.mp3" id="audio"></audio>
+
+        <!--Album art for selected song-->
+        <div class="img-container">
+            <img src="images/sitas-song.jpg" alt="music-cover" id="cover" />
+        </div>
+        <script src="https://unpkg.com/fast-average-color/dist/index.min.js"></script>
+
+        <!--Container for all navigation buttons-->
+        <div class="navigation">
+            <button id="prev" class="action-btn">
+                <i class="fas fa-backward"></i>
+            </button>
+            <button id="play" class="action-btn action-btn-big">
+                <i class="fas fa-play"></i>
+            </button>
+            <button id="next" class="action-btn">
+                <i class="fas fa-forward"></i>
+            </button>
+        </div>
+    </div>
+    <!--Include reference for JS file-->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
